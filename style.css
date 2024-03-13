@@ -1,54 +1,64 @@
-
 body {
-    display: grid;
-    place-content: center;
-    min-height: 100vh;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: var(--fw-400);
+  background-color:#f1f1f1;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
   
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: var(--fw-400);
-  
-    background-color:#f1f1f1;
-  }
-  
-  h1,
-  h2,
-  h3 {
-    font-weight: var(--fw-700);
-  }
-
-
+h1, h2, h3 {
+  font-weight: var(--fw-700);
+}
 .card-grid {
-    display:grid;
-    justify-content: space-evenly;
-    gap: 1.5em;
-    grid-template-columns: repeat(4, 1fr);
-
-    grid-template-areas: 
+  display:grid;
+  justify-content: space-evenly;
+  gap: 1.5em;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
         'one'
         'two'
         'three'
         'four'
         'five';
-    margin-inline:auto;
-    padding-block:2em;
-    width:min(95%, 70rem);
+  margin-inline:auto;
+  padding-block:2em;
+  width:min(95%, 70rem);
 }
 
 .grid-col-span-2 {
-    grid-column:span 2;
+  grid-column:span 2;
 }
-
 
 /*card content*/
 .card {
-    gap: var(--gap, 1rem);
-    flex-direction: column;
-    border: 2px solid #333;
-    border-radius: 0.5rem;
-    box-shadow: 2.5rem 3.75rem 3rem -3rem #333 /0.5;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 1rem);
+  border: 2px solid #333;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem #333 /0.5;
+  padding: 2rem;
 }
 
+.card p {
+  margin-bottom: 2em;
+}
 .card:nth-child(1) {
     grid-area: one;
   }
@@ -102,9 +112,10 @@ body {
     }
   }
 
-.card a.primary-button, a.secondary-button {
-    align-self:start;
-}
+  .card a.primary-button, .card a.secondary-button {
+    margin-top: auto;
+    align-self: start;
+  }
 a.primary-button {
     background-color: #bbbbbb;
     color:#333;
