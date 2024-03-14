@@ -6,7 +6,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: var(--fw-400);
   background-image: linear-gradient(to bottom right, #3200af, #560094);
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -45,6 +44,26 @@ body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
       "four"
       "five";
   }
+  /* Smaller font sizes for mobile */
+  body {
+    font-size: 14px; 
+  }
+  h1 {
+    font-size: 2em; 
+  }
+  h2 {
+    font-size: 1.75em; 
+  }
+  h3 {
+    font-size: 1.5em; 
+  }
+  a.primary-button, a.secondary-button {
+    font-size: 0.9em; 
+  }
+  .card a.primary-button, .card a.secondary-button {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -107,26 +126,14 @@ body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
     grid-area: five;
   }
 
-.card-1 {
-  color:white;
-  background-color: #4828a7;
+.card-1, .card-4, .card-5 {
+  background-color: white;
 }
-.card-2 {
-  color:white;
-  background-color: #703fff;
-}
-.card-3 {
-  background-color: #703fff;
+.card-2, .card-3 {
+  background-color: #ffffff3d;
   color:white;
 }
-.card-4 {
-  color:white;
-  background-color: #4828a7;
-}
-.card-5 {
-  color:black;
-  background-color: #fff;
-}
+
 .card > p:first-of-type {
   font-size: var(--fs-500);
   line-height: 1.2;
